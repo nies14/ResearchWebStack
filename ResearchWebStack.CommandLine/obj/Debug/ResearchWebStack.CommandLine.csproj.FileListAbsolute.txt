@@ -1,0 +1,11 @@
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\CommandLine.dll
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.Data.dll
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.Data.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\CommandLine.xml
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.exe
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.pdb

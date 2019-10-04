@@ -1,0 +1,9 @@
+C:\Users\BS-183\Desktop\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.dll
+C:\Users\BS-183\Desktop\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.pdb
+C:\Users\BS-183\Desktop\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.dll
+C:\Users\BS-183\Desktop\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.dll
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.dll
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.csprojResolveAssemblyReference.cache
