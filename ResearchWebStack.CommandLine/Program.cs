@@ -11,9 +11,9 @@ namespace ResearchWebStack.CommandLine
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void runCommandLineParser(string[] args)
         {
-            Parser.Default.ParseArguments<RunNodeJs, CustomOption, GetFailedTest, GetNonPassingTest, cmd,Registry>(args)
+            Parser.Default.ParseArguments<RunNodeJs, CustomOption, GetFailedTest, GetNonPassingTest, cmd, Registry>(args)
         .MapResult(
           (RunNodeJs o) =>
           {
@@ -84,11 +84,11 @@ namespace ResearchWebStack.CommandLine
           },
           (Registry o) =>
           {
-              if((o.Add!=null && o.Add!="")||(o.Set!=null && o.Set!=""))
+              if ((o.Add != null && o.Add != "") || (o.Set != null && o.Set != ""))
               {
                   CustomProcess.addRegistry(o.Add, o.Value);
               }
-              else if(o.AddOrUpdate!=null && o.AddOrUpdate!="")
+              else if (o.AddOrUpdate != null && o.AddOrUpdate != "")
               {
                   CustomProcess.updateRegistry(o.Add, o.Value);
               }
@@ -97,8 +97,13 @@ namespace ResearchWebStack.CommandLine
                   CustomProcess.updateRegistry(o.Add, o.Value);
               }
               return 1;
-            },
+          },
           errs => 1);
+        }
+        static void Main(string[] args)
+        {
+            runCommandLineParser(args);
         }
     }
 }
+ 

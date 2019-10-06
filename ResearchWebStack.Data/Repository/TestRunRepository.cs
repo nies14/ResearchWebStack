@@ -10,13 +10,18 @@ using Test;
 
 namespace ResearchWebStack.Data.Repository
 {
-    public class TestRunRepository: ITestRunRepository
+    public class TestRunRepository : ITestRunRepository
     {
+        ContentRepository content = null;
+        TestRun test = null;
+        public TestRunRepository()
+        {
+            content = new ContentRepository();
+            test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
+        }
+
         public string UnitTestResults()
         {
-            ContentRepository content = new ContentRepository();
-            TestRun test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
-
             JObject jobject = JObject.FromObject(new
             {
                 Test = test.Results
@@ -28,9 +33,6 @@ namespace ResearchWebStack.Data.Repository
         }
         public string GetFailedUniTestResults()
         {
-            ContentRepository content = new ContentRepository();
-            TestRun test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
-
             JObject jobject = JObject.FromObject(new
             {
                 Test = test.Results.Where(x => x.outcome == "NotExecuted").ToList()
@@ -42,9 +44,6 @@ namespace ResearchWebStack.Data.Repository
         }
         public string GetNonPassingPast()
         {
-            ContentRepository content = new ContentRepository();
-            TestRun test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
-
             JObject jobject = JObject.FromObject(new
             {
                 Test = test.Results.Where(x => x.outcome != "Passed").ToList()
@@ -56,8 +55,6 @@ namespace ResearchWebStack.Data.Repository
         }
         public string GetInfo(string testName, string filterType)
         {
-            ContentRepository content = new ContentRepository();
-            TestRun test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
             if (filterType == "Contains")
             {
                 JObject jobject = JObject.FromObject(new

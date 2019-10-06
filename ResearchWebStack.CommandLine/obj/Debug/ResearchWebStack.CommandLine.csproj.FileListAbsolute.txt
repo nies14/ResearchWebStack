@@ -24,3 +24,5 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.exe
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\obj\Debug\ResearchWebStack.CommandLine.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\Auk.CsharpBootstrapper.dll
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\Auk.CsharpBootstrapper.xml

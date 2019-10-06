@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Auk.CsharpBootstrapper.Extensions;
+using Auk.CsharpBootstrapper.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,17 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LogHelper.EnableDebugMode();
+            try
+            {
+                throw new Exception(message: "Hello");
+                //Console.WriteLine("Hello World!");
+            }
+            catch (Exception ex)
+            {
+                ex.PathErrorLogAndThrow(path: "Path");
+                ex.LogAndThrow(message: "", message2: null, isThrow: true);
+            }
         }
     }
 }

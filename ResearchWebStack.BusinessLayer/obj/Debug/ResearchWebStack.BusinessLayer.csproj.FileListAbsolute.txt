@@ -7,3 +7,6 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debu
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\ResearchWebStack.BusinessLayer.pdb
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\Auk.CsharpBootstrapper.dll
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\Auk.CsharpBootstrapper.xml

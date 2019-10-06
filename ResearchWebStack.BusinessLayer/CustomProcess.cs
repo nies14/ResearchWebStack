@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Auk.CsharpBootstrapper.Extensions;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -60,13 +61,17 @@ namespace ResearchWebStack.BusinessLayer
             }
 
         }
-        public static string startProcess(string path)
+        public static string startProcess(string path,bool isHidden=false,bool isAdmin=false)
         {
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = path;
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
-            start.CreateNoWindow = true;
+            start.CreateNoWindow = isHidden;
+            if (isAdmin)
+            {
+                start.Verb = "runAs";
+            }
 
             using (Process process = Process.Start(start))
             {
@@ -85,7 +90,14 @@ namespace ResearchWebStack.BusinessLayer
             //process.StartInfo.Arguments = "/K dir > C:\\Users\\ASUS\\Desktop\\ResearchWebStack\\Test\\a.txt";
             //string output = process.StandardOutput.ReadToEnd();
             //File.WriteAllText(@"C:\Users\ASUS\Desktop\ResearchWebStack\Test\a.txt", output);
-            File.WriteAllText(path, output);
+            try
+            {
+                File.WriteAllText(path, output);
+            }
+            catch(Exception ex)
+            {
+                ex.PathErrorLogAndThrow(path: "Path");
+            }
         }
     }
 }

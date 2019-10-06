@@ -15,3 +15,6 @@ C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe
 C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.pdb
 C:\Users\ASUS\Documents\ResearchWebStack\Hello\obj\Debug\Hello.exe
 C:\Users\ASUS\Documents\ResearchWebStack\Hello\obj\Debug\Hello.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Auk.CsharpBootstrapper.dll
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Auk.CsharpBootstrapper.xml
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\obj\Debug\Hello.csprojResolveAssemblyReference.cache

@@ -11,3 +11,4 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\bin\Debug\Rese
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.pdb
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.csprojResolveAssemblyReference.cache
