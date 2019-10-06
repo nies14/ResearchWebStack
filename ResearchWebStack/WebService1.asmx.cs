@@ -53,30 +53,8 @@ namespace ResearchWebStack
         public string GetInfo(string testName, string filterType)
         {
             TestRunRepository content = new TestRunRepository();
-            return content.GetInfo(testName,filterType);
+            return content.GetInfo(testName, filterType);
         }
-        //[WebMethod]
-        //public void CreateCommandLineProcess()
-        //{
-        //    ProcessStartInfo start = new ProcessStartInfo();
-        //    start.na
-        //    start.FileName = @"C:\Users\ASUS\Desktop\ResearchWebStack\Test\bin\debug\Test.exe"; // Specify exe name.
-        //    start.UseShellExecute = false;
-        //    start.RedirectStandardOutput = true;
-        //    //
-        //    // Start the process.
-        //    //
-        //    using (Process process = Process.Start(start))
-        //    {
-        //        //
-        //        // Read in all the text from the process with the StreamReader.
-        //        //
-        //        using (StreamReader reader = process.StandardOutput)
-        //        {
-        //            string result = reader.ReadToEnd();
-        //            Console.Write(result);
-        //        }
-        //    }
-        //}
+
     }
 }

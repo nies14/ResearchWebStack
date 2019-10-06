@@ -9,3 +9,9 @@ C:\Users\ASUS\Desktop\ResearchWebStack\Hello\bin\Debug\Hello.exe
 C:\Users\ASUS\Desktop\ResearchWebStack\Hello\bin\Debug\Hello.pdb
 C:\Users\ASUS\Desktop\ResearchWebStack\Hello\obj\Debug\Hello.exe
 C:\Users\ASUS\Desktop\ResearchWebStack\Hello\obj\Debug\Hello.pdb
+C:\Users\ASUS\Desktop\ResearchWebStack\Hello\obj\Debug\Hello.csprojResolveAssemblyReference.cache
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe.config
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\obj\Debug\Hello.exe
+C:\Users\ASUS\Documents\ResearchWebStack\Hello\obj\Debug\Hello.pdb

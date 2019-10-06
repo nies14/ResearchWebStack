@@ -3,3 +3,7 @@ C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\
 C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.dll
 C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\ResearchWebStack.BusinessLayer.dll
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\ResearchWebStack.BusinessLayer.pdb
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.dll
+C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.pdb

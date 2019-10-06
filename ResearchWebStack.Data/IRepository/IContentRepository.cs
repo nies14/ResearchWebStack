@@ -11,6 +11,6 @@ namespace ResearchWebStack.Data
     public interface IContentRepository
     {
         XmlDocument getXmlFile();
-        TestRun DeserializeXml(string filepath);
+        TestRun deserializeXml(string filepath);
     }
 }

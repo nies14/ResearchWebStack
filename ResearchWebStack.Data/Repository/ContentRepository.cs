@@ -17,7 +17,7 @@ namespace ResearchWebStack.Data
             doc.Load("../../../ResearchWebStack.Content/UnitTests.xml");
             return doc;
         }
-        public TestRun DeserializeXml(string filepath)
+        public TestRun deserializeXml(string filepath)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(TestRun));
             TestRun resultingMessage = (TestRun)serializer.Deserialize(new XmlTextReader(filepath));
