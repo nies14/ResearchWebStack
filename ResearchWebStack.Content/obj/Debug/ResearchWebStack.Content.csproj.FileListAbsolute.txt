@@ -12,3 +12,9 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\bin\Debug\Rese
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.pdb
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.csprojResolveAssemblyReference.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\bin\Debug\ResearchWebStack.Content.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.csproj.CoreCompileInputs.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\obj\Debug\ResearchWebStack.Content.csprojAssemblyReference.cache

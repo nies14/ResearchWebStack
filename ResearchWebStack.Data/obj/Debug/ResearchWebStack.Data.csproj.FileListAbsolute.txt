@@ -20,3 +20,14 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\Newtons
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\ResearchWebStack.Data.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\ResearchWebStack.Data.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\ResearchWebStack.Content.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\ResearchWebStack.Content.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.csprojAssemblyReference.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.csproj.CoreCompileInputs.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.csproj.CopyComplete
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Data\obj\Debug\ResearchWebStack.Data.pdb

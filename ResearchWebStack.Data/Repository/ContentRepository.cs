@@ -14,14 +14,28 @@ namespace ResearchWebStack.Data
         public XmlDocument getXmlFile()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("../../../ResearchWebStack.Content/UnitTests.xml");
+            try
+            {
+                doc.Load("../../../ResearchWebStack.Content/UnitTests.xml");
+            }
+            catch (Exception ex)
+            {
+                doc = null;
+            }
             return doc;
         }
         public TestRun deserializeXml(string filepath)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(TestRun));
-            TestRun resultingMessage = (TestRun)serializer.Deserialize(new XmlTextReader(filepath));
-            return resultingMessage;
+            try
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(TestRun));
+                TestRun resultingMessage = (TestRun)serializer.Deserialize(new XmlTextReader(filepath));
+                return resultingMessage;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }
