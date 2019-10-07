@@ -10,3 +10,9 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debu
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\Auk.CsharpBootstrapper.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\Auk.CsharpBootstrapper.xml
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\ResearchWebStack.BusinessLayer.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\bin\Debug\ResearchWebStack.BusinessLayer.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.BusinessLayer\obj\Debug\ResearchWebStack.BusinessLayer.csprojAssemblyReference.cache

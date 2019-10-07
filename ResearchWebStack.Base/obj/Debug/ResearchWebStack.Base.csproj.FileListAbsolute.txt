@@ -9,3 +9,16 @@ C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\Newtons
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.csprojResolveAssemblyReference.cache
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.dll
 C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\ResearchWebStack.Base.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\ResearchWebStack.Base.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\CommandLine.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\ResearchWebStack.Data.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\ResearchWebStack.Data.pdb
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\CommandLine.xml
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.csprojAssemblyReference.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.csproj.CoreCompileInputs.cache
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.csproj.CopyComplete
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.dll
+C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Base\obj\Debug\ResearchWebStack.Base.pdb

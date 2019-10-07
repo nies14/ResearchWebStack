@@ -1,5 +1,4 @@
-﻿using Auk.CsharpBootstrapper.Extensions;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,79 +11,125 @@ namespace ResearchWebStack.BusinessLayer
 {
     public class CustomProcess
     {
-        public static void addRegistry(string keyName,string keyValue)
+        public static string addRegistry(string keyName,string keyValue)
         {
-            RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\"+keyName);
-
-            //storing the values  
-            key.SetValue(keyName,keyValue);
-            key.Close();
-        }
-        public static void updateRegistry(string keyName, string keyValue)
-        {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\"+keyName);
-
-            //if it does exist, retrieve the stored values  
-            if (key != null)
+            try
             {
-                key.SetValue(keyName,keyValue);
+                RegistryKey key = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\" + keyName);
+
+                //storing the values  
+                key.SetValue(keyName, keyValue);
                 key.Close();
+                return "Regitry key created successfully";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
             }
         }
-        public static void deleteKey(string keyName)
+        public static string updateRegistry(string keyName, string keyValue)
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + keyName);
- 
-            if (key != null)
+            try
             {
-                key.DeleteValue(keyName);
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + keyName);
+
+                //if it does exist, retrieve the stored values  
+                if (key != null)
+                {
+                    key.SetValue(keyName, keyValue);
+                    key.Close();
+                    return "Regitry key updated successfully";
+                }
+                else
+                {
+                    return "Regitry key not found";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        public static string deleteKey(string keyName)
+        {
+            try
+            {
+                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\" + keyName);
+
+                if (key != null)
+                {
+                    key.DeleteValue(keyName);
+                    return "Regitry key deleted successfully";
+                }
+                else
+                {
+                    return "Regitry key not found";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
             }
         }
         public static string runScript(string command)
         {
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = "CMD.exe";
-            start.Arguments = command;
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            start.CreateNoWindow = true;
-
-            using (Process process = Process.Start(start))
+            string result = "";
+            try
             {
-                string result = "";
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    result = reader.ReadToEnd();
-                    Console.Write(result);
-                }
-                return result;
-            }
+                ProcessStartInfo start = new ProcessStartInfo();
+                start.FileName = "CMD.exe";
+                start.Arguments = command;
+                start.UseShellExecute = false;
+                start.RedirectStandardOutput = true;
+                start.CreateNoWindow = true;
 
+                using (Process process = Process.Start(start))
+                {
+                    using (StreamReader reader = process.StandardOutput)
+                    {
+                        result = reader.ReadToEnd();
+                        Console.Write(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = ex.Message;
+            }
+            return result;
         }
         public static string startProcess(string path,bool isHidden=false,bool isAdmin=false)
         {
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = path;
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            start.CreateNoWindow = isHidden;
-            if (isAdmin)
+            string result = "";
+            try
             {
-                start.Verb = "runAs";
+                ProcessStartInfo start = new ProcessStartInfo();
+                start.FileName = path;
+                start.UseShellExecute = false;
+                start.RedirectStandardOutput = true;
+                start.CreateNoWindow = isHidden;
+                if (isAdmin)
+                {
+                    start.Verb = "runAs";
+                }
+
+                using (Process process = Process.Start(start))
+                {
+                    using (StreamReader reader = process.StandardOutput)
+                    {
+                        result = reader.ReadToEnd();
+                        Console.Write(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                result = ex.Message;
             }
 
-            using (Process process = Process.Start(start))
-            {
-                string result = "";
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    result = reader.ReadToEnd();
-                    Console.Write(result);
-                }
-                return result;
-            }
+            return result;
         }
-        public static void redirectProcessOutput(string path, string output)
+        public static string redirectProcessOutput(string path, string output)
         {
             //process.StartInfo.FileName = @"C:\Users\ASUS\Desktop\ResearchWebStack\Hello\bin\Debug\Hello.exe";
             //process.StartInfo.Arguments = "/K dir > C:\\Users\\ASUS\\Desktop\\ResearchWebStack\\Test\\a.txt";
@@ -93,10 +138,11 @@ namespace ResearchWebStack.BusinessLayer
             try
             {
                 File.WriteAllText(path, output);
+                return "File Writing Successfull";
             }
             catch(Exception ex)
             {
-                ex.PathErrorLogAndThrow(path: "Path");
+                return ex.Message;
             }
         }
     }

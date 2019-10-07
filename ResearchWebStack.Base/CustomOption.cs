@@ -20,7 +20,7 @@ namespace ResearchWebStack.Base
     }
 
     [Verb("cmd", HelpText = "run cmd command")]
-    public class cmd : CustomOption
+    public class Cmd : CustomOption
     {
         //[Option('n',"name", Required = false)]
         //public string FileName { get; set; }
@@ -30,6 +30,10 @@ namespace ResearchWebStack.Base
         //public string Script { get; set; }
         //[Option('r', "redirect")]
         //public string RedirectPath { get; set; }
+    }
+    [Verb("ps", HelpText = "run cmd command")]
+    public class Ps : CustomOption
+    {
     }
     [Verb("runPython", HelpText = "run Python file")]
     public class RunPython : CustomOption
@@ -55,7 +59,7 @@ namespace ResearchWebStack.Base
         //[Option('r', "redirect")]
         //public string RedirectPath { get; set; }
     }
-    [Verb("custom", HelpText = "run custom Js file")]
+    [Verb("custom", HelpText = "run custom file")]
     public class CustomOption
     {
         [Option('n', "name", Required = false)]
@@ -70,19 +74,35 @@ namespace ResearchWebStack.Base
     [Verb("getFailedTest", HelpText = "Get Failed Test")]
     public class GetFailedTest
     {
-        public void GetResults()
+        public string GetResults()
         {
-            TestRunRepository test = new TestRunRepository();
-            Console.WriteLine(test.GetFailedUniTestResults());
+            try
+            {
+                TestRunRepository test = new TestRunRepository();
+                Console.WriteLine(test.GetFailedUniTestResults());
+                return "Failed Test returned successfully";
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
     [Verb("getNonPassingTest", HelpText = "Get Failed Test")]
     public class GetNonPassingTest
     {
-        public void GetResults()
+        public string GetResults()
         {
-            TestRunRepository test = new TestRunRepository();
-            Console.WriteLine(test.GetNonPassingPast());
+            try
+            {
+                TestRunRepository test = new TestRunRepository();
+                Console.WriteLine(test.GetNonPassingPast());
+                return "Results returned successfully";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }    
 }
