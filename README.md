@@ -20,3 +20,8 @@ Task - 3
 	start the server WebService.asmx file resides.Then Open Visual Studio 
 	Code...Then open C:\Users\{User Name}\Documents\ResearchWebStack\NodeJs
 	on the vs code terminal write node bin/www
+	It's run on port 3000
+	To see it in the browser go 
+	
+	localhost:3000/Node/View/ew/cmd/aNonPassing
+	localhost:3000/Node/View/UnitTest	
