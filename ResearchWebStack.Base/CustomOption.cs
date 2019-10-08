@@ -70,6 +70,10 @@ namespace ResearchWebStack.Base
         public string Script { get; set; }
         [Option('r', "redirect", Required = false)]
         public string RedirectPath { get; set; }
+        [Option('a', "admin", Required = false)]
+        public bool? IsAdmin { get; set; }
+        [Option('w', "window", Required = false)]
+        public bool? IsOpenWindow { get; set; }
     }
     [Verb("getFailedTest", HelpText = "Get Failed Test")]
     public class GetFailedTest

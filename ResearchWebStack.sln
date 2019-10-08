@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchWebStack", "ResearchWebStack\ResearchWebStack.csproj", "{13AD423A-63B6-4B5F-AFBD-773DAC38BB2B}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchWebStack.BusinessLayer", "ResearchWebStack.BusinessLayer\ResearchWebStack.BusinessLayer.csproj", "{DEFBDE53-CF8D-4837-8951-49E968740342}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchWebStack.Base", "ResearchWebStack.Base\ResearchWebStack.Base.csproj", "{D533664A-3E4D-434F-828B-789B10CFF87D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchWebStock.Service", "ResearchWebStock.Service\ResearchWebStock.Service.csproj", "{E7F7308C-4805-4B47-B188-614132541286}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{D533664A-3E4D-434F-828B-789B10CFF87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D533664A-3E4D-434F-828B-789B10CFF87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D533664A-3E4D-434F-828B-789B10CFF87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F7308C-4805-4B47-B188-614132541286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F7308C-4805-4B47-B188-614132541286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F7308C-4805-4B47-B188-614132541286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F7308C-4805-4B47-B188-614132541286}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

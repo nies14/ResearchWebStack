@@ -136,16 +136,36 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\UnitTestReference\item.disco" />
+    <None Include="Connected Services\UnitTestReference\configuration91.svcinfo" />
+    <None Include="Connected Services\UnitTestReference\configuration.svcinfo" />
+    <None Include="Connected Services\UnitTestReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="TestWebForm.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\UnitTestReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestWebForm.aspx.cs">
+      <DependentUpon>TestWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestWebForm.aspx.designer.cs">
+      <DependentUpon>TestWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -158,7 +178,15 @@
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
+    <None Include="Connected Services\UnitTestReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UnitTestReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\UnitTestReference\TestService.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,6 +199,10 @@
       <Project>{DEFBDE53-CF8D-4837-8951-49E968740342}</Project>
       <Name>ResearchWebStack.BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ResearchWebStack.CommandLine\ResearchWebStack.CommandLine.csproj">
+      <Project>{0d514ced-24eb-4c27-960d-a010855c6a3c}</Project>
+      <Name>ResearchWebStack.CommandLine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResearchWebStack.Content\ResearchWebStack.Content.csproj">
       <Project>{7762027F-E4BF-4DA9-9AA7-72BD1AEB363D}</Project>
       <Name>ResearchWebStack.Content</Name>
@@ -179,6 +211,16 @@
       <Project>{b9bc69ab-9720-4e5a-8aa5-cdaa604d4f36}</Project>
       <Name>ResearchWebStack.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ResearchWebStock.Service\ResearchWebStock.Service.csproj">
+      <Project>{e7f7308c-4805-4b47-b188-614132541286}</Project>
+      <Name>ResearchWebStock.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\UnitTestReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -195,7 +237,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4326</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:14305/</IISUrl>
+          <IISUrl>http://localhost:1505/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

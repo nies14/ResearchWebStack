@@ -18,10 +18,11 @@ namespace ResearchWebStack.Data.Repository
         public TestRunRepository()
         {
             content = new ContentRepository();
-            test = content.deserializeXml(@"C:\Users\BS-183\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
-            //string path = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
-            //path = path.TrimEnd('/').Substring(0, path.LastIndexOf('/'));
-            //test = content.deserializeXml(path+"/ResearchWebStack.Content/UnitTests.xml");
+            //test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
+            string path = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
+            path = path.TrimEnd('/');
+            path = path.Substring(0, path.LastIndexOf('/'));
+            test = content.deserializeXml(path+"/ResearchWebStack.Content/UnitTests.xml");
         }
 
         public string UnitTestResults()

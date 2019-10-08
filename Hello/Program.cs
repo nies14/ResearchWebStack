@@ -1,5 +1,6 @@
 ﻿using Auk.CsharpBootstrapper.Extensions;
 using Auk.CsharpBootstrapper.Helper;
+using ResearchWebStock.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,24 @@ namespace Hello
     class Program
     {
 
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        //private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello");
+
+            //remove the below reason if u want to invoke the service contractor from here
+            //#region Service Contractor
+            using (System.ServiceModel.ServiceHost host = new
+               System.ServiceModel.ServiceHost(typeof(TestService)))
+            {
+                host.Open();
+                Console.WriteLine("Host started @ " + DateTime.Now.ToString());
+                Console.ReadLine();
+            }
+            //#endregion
+
+
+            //Console.WriteLine("Hello World!");
             //LogHelper.EnableDebugMode();
             //try
             //{
@@ -31,7 +46,6 @@ namespace Hello
             //    ex.PathErrorLogAndThrow(path: "Path");
             //    ex.LogAndThrow(message: "", message2: null, isThrow: true);
             //}
-
 
             //var secs = 3;
             //log.Fatal("Start log FATAL...");
@@ -59,94 +73,5 @@ namespace Hello
         }
 
     }
-    //[ServiceContract]
-    //public interface IService
-    //{
-    //    [OperationContract]
-    //    [WebGet]
-    //    string EchoWithGet(string s);
-
-    //    [OperationContract]
-    //    [WebInvoke]
-    //    string EchoWithPost(string s);
-    //}
-
-    //public class Service : IService
-    //{
-    //    public string EchoWithGet(string s)
-    //    {
-    //        return "You said " + s;
-    //    }
-
-    //    public string EchoWithPost(string s)
-    //    {
-    //        return "You said " + s;
-    //    }
-    //}
-    //class Program
-    //{
-    //    static void Main(string[] args)
-    //    {
-    //        ServiceHost host = new ServiceHost(typeof(Service), new Uri("http://localhost:14202"));
-    //        host.AddServiceEndpoint(typeof(IService), new BasicHttpBinding(), "Soap");
-    //        ServiceEndpoint endpoint = host.AddServiceEndpoint(typeof(IService), new WebHttpBinding(), "Web");
-    //        endpoint.Behaviors.Add(new WebHttpBehavior());
-
-    //        try
-    //        {
-    //            host.Open();
-
-    //            using (WebChannelFactory<IService> wcf = new WebChannelFactory<IService>(new Uri("http://localhost:14202/Web")))
-    //            {
-    //                IService channel = wcf.CreateChannel();
-
-    //                string s;
-
-    //                Console.WriteLine("Calling EchoWithGet by HTTP GET: ");
-    //                s = channel.EchoWithGet("Hello, world");
-    //                Console.WriteLine("   Output: {0}", s);
-
-    //                Console.WriteLine("");
-    //                Console.WriteLine("This can also be accomplished by navigating to");
-    //                Console.WriteLine("http://localhost:14202/Web/EchoWithGet?s=Hello, world!");
-    //                Console.WriteLine("in a web browser while this sample is running.");
-
-    //                Console.WriteLine("");
-
-    //                Console.WriteLine("Calling EchoWithPost by HTTP POST: ");
-    //                s = channel.EchoWithPost("Hello, world");
-    //                Console.WriteLine("   Output: {0}", s);
-    //                Console.WriteLine("");
-    //            }
-    //            using (ChannelFactory<IService> scf = new ChannelFactory<IService>(new BasicHttpBinding(), "http://localhost:14202/Soap"))
-    //            {
-    //                IService channel = scf.CreateChannel();
-
-    //                string s;
-
-    //                Console.WriteLine("Calling EchoWithGet on SOAP endpoint: ");
-    //                s = channel.EchoWithGet("Hello, world");
-    //                Console.WriteLine("   Output: {0}", s);
-
-    //                Console.WriteLine("");
-
-    //                Console.WriteLine("Calling EchoWithPost on SOAP endpoint: ");
-    //                s = channel.EchoWithPost("Hello, world");
-    //                Console.WriteLine("   Output: {0}", s);
-    //                Console.WriteLine("");
-    //            }
-
-
-    //            Console.WriteLine("Press [Enter] to terminate");
-    //            Console.ReadLine();
-    //            host.Close();
-    //        }
-    //        catch (CommunicationException cex)
-    //        {
-    //            Console.WriteLine("An exception occurred: {0}", cex.Message);
-    //            host.Abort();
-    //        }
-    //    }
-    //}
 
 }

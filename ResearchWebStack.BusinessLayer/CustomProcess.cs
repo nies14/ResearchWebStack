@@ -71,7 +71,7 @@ namespace ResearchWebStack.BusinessLayer
                 return ex.Message;
             }
         }
-        public static string runScript(string command)
+        public static string runScript(string command, bool isHidden = false, bool isAdmin = false)
         {
             string result = "";
             try
@@ -82,6 +82,10 @@ namespace ResearchWebStack.BusinessLayer
                 start.UseShellExecute = false;
                 start.RedirectStandardOutput = true;
                 start.CreateNoWindow = true;
+                if (isAdmin)
+                {
+                    start.Verb = "runAs";
+                }
 
                 using (Process process = Process.Start(start))
                 {

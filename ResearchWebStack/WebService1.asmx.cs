@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ResearchWebStack.BusinessLayer;
+using ResearchWebStack.CommandLine;
 using ResearchWebStack.Data;
 using ResearchWebStack.Data.Repository;
 using System;
@@ -57,16 +58,36 @@ namespace ResearchWebStack
         [WebMethod]
         public void CreateCommandLineProcess(string processName, string processPath,string arguments,bool isRunAsync,bool isHidden,bool isAdmin)
         {
-            Task taskDivisionInfo = Task.Run(() => CustomProcess.startProcess(processPath,isHidden,isAdmin));
-            //Task taskOfficialWebsiteInfo = Task.Run(() => CustomProcess.runScript();
-            //Task taskManagedEventInfo = Task.Run(() => LoadManagedEventComboboxValues(organization));
+            try
+            {
+                Program.runCommandLineParser(new[] { arguments });
+            }
+            catch (Exception ex)
+            {
+                //result = ex.Message;
+            }
+            //ProcessStartInfo startInfo = new ProcessStartInfo(string.Concat(exePath, "abc.exe"));
+            //startInfo.Arguments = "-e dev -l line1 -q 1";
+        }
+        [WebMethod]
+        public void CreateFiveCommandLine()
+        {
+            CreateCommandLineProcess("test 1", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false);
+            CreateCommandLineProcess("test 2", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false);
+            CreateCommandLineProcess("test 3", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false);
+            CreateCommandLineProcess("test 4", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false);
+            CreateCommandLineProcess("test 5", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false);
+            //Task taskDivisionInfo = Task.Run(() => CustomProcess.startProcess(@"C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", "runNodejs -n ghg -p C:\\Users\\ASUS\\Desktop\\ResearchWebStack\\Hello\\bin\\Debug\\Hello.exe"));
         }
         [WebMethod]
         public void CreateFiveCommandLineAsyns(string testName, string filterType)
         {
-            Task taskDivisionInfo = Task.Run(() => CustomProcess.startProcess(@"C:\Users\ASUS\Desktop\ResearchWebStack\Hello\bin\Debug\Hello.exe"));
-            //Task taskOfficialWebsiteInfo = Task.Run(() => CustomProcess.runScript();
-            //Task taskManagedEventInfo = Task.Run(() => LoadManagedEventComboboxValues(organization));
+            Task test1 = Task.Run(() => this.CreateCommandLineProcess("test 1", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe",false,true,false));
+            Task test2 = Task.Run(() => this.CreateCommandLineProcess("test 2", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false));
+            Task test3 = Task.Run(() => this.CreateCommandLineProcess("test 3", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false));
+            Task test4 = Task.Run(() => this.CreateCommandLineProcess("test 4", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false));
+            Task test5 = Task.Run(() => this.CreateCommandLineProcess("test 5", @"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", @"runNodejs - n ghg - p C:\Users\ASUS\Documents\ResearchWebStack\Hello\bin\Debug\Hello.exe", false, true, false));
+            //Task taskDivisionInfo = Task.Run(() => CustomProcess.startProcess(@"C:\Users\ASUS\Desktop\ResearchWebStack\ResearchWebStack.CommandLine\bin\Debug\ResearchWebStack.CommandLine.exe", "runNodejs -n ghg -p C:\\Users\\ASUS\\Desktop\\ResearchWebStack\\Hello\\bin\\Debug\\Hello.exe"));
         }
     }
 }

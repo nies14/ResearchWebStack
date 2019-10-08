@@ -12,7 +12,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace ResearchWebStack.CommandLine
 {
-    class Program
+    public class Program
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
@@ -24,15 +24,17 @@ namespace ResearchWebStack.CommandLine
         .MapResult(
           (RunNodeJs o) =>
           {
+              bool isAdmin = o.IsAdmin != null ? o.IsAdmin.Value : false;
+              bool isOpenWindow = o.IsOpenWindow != null ? o.IsOpenWindow.Value : false;
               if (o.FilePath != "")
               {
-                  output = CustomProcess.startProcess(o.FilePath) + " for verb runNodeJs";
+                  output = CustomProcess.startProcess(o.FilePath,isOpenWindow,isAdmin) + " for verb runNodeJs";
                   log.Info(output);
                   //LogHelper.QInfo(output);
               }
               if (o.FileName == "cmd" && o.Script != "")
               {
-                  output = CustomProcess.runScript("");
+                  output = CustomProcess.runScript(o.Script, isOpenWindow, isAdmin);
                   log.Info(output);
               }
               if (o.RedirectPath != "" && output != "")
@@ -44,16 +46,17 @@ namespace ResearchWebStack.CommandLine
           },
           (RunPython o) =>
           {
-
+              bool isAdmin = o.IsAdmin != null ? o.IsAdmin.Value : false;
+              bool isOpenWindow = o.IsOpenWindow != null ? o.IsOpenWindow.Value : false;
               if (o.Script != "")
               {
                   //"/K ipconfig"
-                  output = CustomProcess.runScript(o.Script);
+                  output = CustomProcess.runScript(o.Script, isOpenWindow, isAdmin);
                   log.Info(output);
               }
               else if (o.FilePath != "")
               {
-                  output = CustomProcess.startProcess(o.FilePath) + " for verb runPythonJs";
+                  output = CustomProcess.startProcess(o.FilePath, isOpenWindow, isAdmin) + " for verb runPythonJs";
                   log.Info(output);
                   //LogHelper.QInfo(output);
               }
@@ -77,6 +80,8 @@ namespace ResearchWebStack.CommandLine
           },
           (Cmd o) =>
           {
+              bool isAdmin = o.IsAdmin != null ? o.IsAdmin.Value : false;
+              bool isOpenWindow = o.IsOpenWindow != null ? o.IsOpenWindow.Value : false;
               //if (o.FilePath != null && o.FilePath != "")
               //{
               //    output = CustomProcess.startProcess(o.FilePath) + " customs";
@@ -84,12 +89,12 @@ namespace ResearchWebStack.CommandLine
               if ((o.FileName == "cmd" || o.FileName == "ps") && o.Script != "")
               {
                   //"/K ipconfig"
-                  output = CustomProcess.runScript(o.Script) + " for verb cmd";
+                  output = CustomProcess.runScript(o.Script, isOpenWindow, isAdmin) + " for verb cmd";
                   log.Info(output);
               }
               else if (o.FilePath != null && o.FilePath != "")
               {
-                  output = CustomProcess.startProcess(o.FilePath);
+                  output = CustomProcess.startProcess(o.FilePath, isOpenWindow, isAdmin);
                   log.Info(output);
               }
               if (o.RedirectPath != "" && output != "")
@@ -101,6 +106,9 @@ namespace ResearchWebStack.CommandLine
           },
           (Ps o) =>
           {
+
+              bool isAdmin = o.IsAdmin != null ? o.IsAdmin.Value : false;
+              bool isOpenWindow = o.IsOpenWindow != null ? o.IsOpenWindow.Value : false;
               //if (o.FilePath != null && o.FilePath != "")
               //{
               //    output = CustomProcess.startProcess(o.FilePath) + " customs";
@@ -108,12 +116,12 @@ namespace ResearchWebStack.CommandLine
               if ((o.FileName == "cmd" || o.FileName == "ps") && o.Script != "")
               {
                   //"/K ipconfig"
-                  output = CustomProcess.runScript(o.Script);
+                  output = CustomProcess.runScript(o.Script, isOpenWindow, isAdmin);
                   log.Info(output);
               }
               else if (o.FilePath != null && o.FilePath != "")
               {
-                  output = CustomProcess.startProcess(o.FilePath);
+                  output = CustomProcess.startProcess(o.FilePath, isOpenWindow, isAdmin);
                   log.Info(output);
               }
               if (o.RedirectPath != "" && output != "")
