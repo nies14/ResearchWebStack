@@ -10,7 +10,7 @@ namespace ResearchWebStack.Data.IRepository
     {
         string UnitTestResults();
         string GetFailedUniTestResults();
-        string GetNonPassingPast();
+        string GetNonPassingTest();
         string GetInfo(string testName, string filterType);
     }
 }

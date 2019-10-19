@@ -35,6 +35,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,6 +53,10 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ResearchWebStack.CommandLine\ResearchWebStack.CommandLine.csproj">
+      <Project>{0D514CED-24EB-4C27-960D-A010855C6A3C}</Project>
+      <Name>ResearchWebStack.CommandLine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResearchWebStack.Data\ResearchWebStack.Data.csproj">
       <Project>{B9BC69AB-9720-4E5A-8AA5-CDAA604D4F36}</Project>
       <Name>ResearchWebStack.Data</Name>

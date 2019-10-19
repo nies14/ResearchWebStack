@@ -13,16 +13,17 @@ namespace ResearchWebStack.Data.Repository
 {
     public class TestRunRepository : ITestRunRepository
     {
-        ContentRepository content = null;
-        TestRun test = null;
+        private static ContentRepository content = null;
+        private static TestRun test = null;
         public TestRunRepository()
         {
             content = new ContentRepository();
             //test = content.deserializeXml(@"C:\Users\ASUS\Documents\ResearchWebStack\ResearchWebStack.Content\UnitTests.xml");
-            string path = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
-            path = path.TrimEnd('/');
-            path = path.Substring(0, path.LastIndexOf('/'));
-            test = content.deserializeXml(path+"/ResearchWebStack.Content/UnitTests.xml");
+            //string path = AppDomain.CurrentDomain.BaseDirectory.Replace('\\', '/');
+            //path = path.TrimEnd('/');
+            //path = path.Substring(0, path.LastIndexOf('/'));
+            //test = content.deserializeXml(path+"/ResearchWebStack.Content/UnitTests.xml");
+            test = content.deserializeXml(@"C:\UnitTestFile\UnitTests.xml");
         }
 
         public string UnitTestResults()
@@ -47,7 +48,7 @@ namespace ResearchWebStack.Data.Repository
             });
             return jobject.ToString();
         }
-        public string GetNonPassingPast()
+        public string GetNonPassingTest()
         {
             JObject jobject = JObject.FromObject(new
             {
@@ -86,7 +87,7 @@ namespace ResearchWebStack.Data.Repository
             {
                 JObject jobject = JObject.FromObject(new
                 {
-                    Test = test.Results.Where(x => x.testName.StartsWith(testName)).ToList()
+                    Test = test.Results.Where(x => x.testName.EndsWith(testName)).ToList()
                 }, new JsonSerializer()
                 {
                     ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize

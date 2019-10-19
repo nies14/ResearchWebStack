@@ -23,13 +23,13 @@ namespace Hello
 
             //remove the below reason if u want to invoke the service contractor from here
             //#region Service Contractor
-            using (System.ServiceModel.ServiceHost host = new
-               System.ServiceModel.ServiceHost(typeof(TestService)))
-            {
-                host.Open();
-                Console.WriteLine("Host started @ " + DateTime.Now.ToString());
-                Console.ReadLine();
-            }
+            //using (System.ServiceModel.ServiceHost host = new
+            //   System.ServiceModel.ServiceHost(typeof(TestService)))
+            //{
+            //    host.Open();
+            //    Console.WriteLine("Host started @ " + DateTime.Now.ToString());
+            //    Console.ReadLine();
+            //}
             //#endregion
 
 

@@ -46,9 +46,9 @@ namespace ResearchWebStack
             return content.GetFailedUniTestResults();
         }
         [WebMethod(MessageName = "UnitTestResults/GetNonPassingPast")]
-        public string GetNonPassingPast()
+        public string GetNonPassingTest()
         {
-            return content.GetNonPassingPast();
+            return content.GetNonPassingTest();
         }
         [WebMethod(MessageName = "UnitTestResults/GetInfo")]
         public string GetInfo(string testName, string filterType)

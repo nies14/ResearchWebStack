@@ -100,7 +100,7 @@ namespace ResearchWebStack.Base
             try
             {
                 TestRunRepository test = new TestRunRepository();
-                Console.WriteLine(test.GetNonPassingPast());
+                Console.WriteLine(test.GetNonPassingTest());
                 return "Results returned successfully";
             }
             catch (Exception ex)

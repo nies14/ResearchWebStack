@@ -18,8 +18,8 @@ router.get('/Node/View/UnitTest', function(req, res, next) {
     res.render('index', { data: JSON.parse(body) });
   });
 });
-router.get('/Node/View/ew/cmd/aNonPassing', function(req, res, next) {
-  request('http://localhost:45831/WebService1.asmx/UnitTestResults', function (error, response, body) {
+router.get('/Node/View/UnitTets/ew/cmd/aNonPassing', function(req, res, next) {
+  request('http://localhost:45831/WebService1.asmx/UnitTestResults/GetNonPassingPast', function (error, response, body) {
     resp = "baal";
     // console.log('error:', error); // Print the error if one occurred
     // console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
