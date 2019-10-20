@@ -19,18 +19,18 @@ namespace Hello
         //private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+            //Console.WriteLine("Hello");
 
             //remove the below reason if u want to invoke the service contractor from here
-            //#region Service Contractor
-            //using (System.ServiceModel.ServiceHost host = new
-            //   System.ServiceModel.ServiceHost(typeof(TestService)))
-            //{
-            //    host.Open();
-            //    Console.WriteLine("Host started @ " + DateTime.Now.ToString());
-            //    Console.ReadLine();
-            //}
-            //#endregion
+            #region Service Contractor
+            using (System.ServiceModel.ServiceHost host = new
+               System.ServiceModel.ServiceHost(typeof(TestService)))
+            {
+                host.Open();
+                Console.WriteLine("Host started @ " + DateTime.Now.ToString());
+                Console.ReadLine();
+            }
+            #endregion
 
 
             //Console.WriteLine("Hello World!");
