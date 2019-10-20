@@ -15,7 +15,7 @@ Task - 1
 
 	    HelloService.TestServiceClient client = new 
         	HelloService.TestServiceClient("BasicHttpBinding_ITestService");
-            Console.WriteLine(client.GetInfo("fail","Contains"));
+            Console.WriteLine(client.UnitTestResults());
 
 Task - 2
 	change {User Name} in the below arguments by ur pc's user name and rebuild ur project	
